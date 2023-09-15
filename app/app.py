@@ -2,7 +2,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from fastai.vision.all import *
-from fastai.learners import load_learner
+from fastai.learner import load_learner
 from cats_and_dogs_breed import upload_photo, capture_photo, model_info
 
 
