@@ -38,6 +38,15 @@ def app():
     # Sorting
     vocab = sorted(vocab)
 
+    with open("models/model_preprocessing_pipeline.pkl", "rb") as f:
+        preprocessing_pipeline = pickle.load(f)
+
+    with open("models/freezed_model_summary.pkl", "rb") as f:
+        freezed_model_summary = pickle.load(f)
+
+    with open("models/unfreezed_model_summary.pkl", "rb") as f:
+        unfreezed_model_summary = pickle.load(f)
+
     #######################################################################################################################
 
     if selected == "Upload":
@@ -59,6 +68,12 @@ def app():
 
     if selected == "Model":
         model_info()
+        st.subheader("Model Preprocessing Pipeline")
+        st.code(preprocessing_pipeline)
+        st.subheader("Model Architecture (Freezed Layers)")
+        st.code(freezed_model_summary)
+        st.subheader("Model Architecture (Unreezed Layers)")
+        st.code(unfreezed_model_summary)
 
 
 #######################################################################################################################
