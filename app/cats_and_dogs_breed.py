@@ -26,14 +26,21 @@ def upload_photo(model=None, vocab=None, key=None):
         st.image(image, use_column_width=True)
 
         if st.button("**Detect**", key="pets_detect"):
-            output = model.predict(image)
+            label, index, preds = model.predict(image)
+
+            values, indices = preds.topk(5)  # get the top 5 values and indices
+            # get the corresponding class names
+            top_classes = model.dls.vocab[indices]
+            values = values.tolist()
             st.markdown(f"""<div style="text-align:center;">
-                            <h1>{output[0]}</h1>
+                            <h1>{label}</h1>
                             </div>""",
                         unsafe_allow_html=True)
 
             st.image(
-                image, caption=f'{output[0]} {max(output[2]).item() * 100:.2f}%', use_column_width=True)
+                image, caption=f'{label} {max(preds).item() * 100:.2f}%', use_column_width=True)
+            st.write(top_classes)
+            st.write(values)
 
 #######################################################################################################################
 
