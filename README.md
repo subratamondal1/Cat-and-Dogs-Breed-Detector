@@ -1,6 +1,48 @@
 # <center>🐶🐱Cat & Dog Breed Detector🐕🐈</center>
 ---
 
+## 1. Introduction
+
+This project aims to develop a web application using Streamlit to detect the breed of pets (cats and dogs). The model is trained on a dataset of over 37 breeds of cats and dogs. The web application has three options:
+
+1. **Upload:** Users can upload an image of a pet and the model will predict the breed of the pet in real time. The model will also display the top 5 classes with the highest probability, along with the predicted class being the first.
+2. **Capture:** Users can capture an image of a pet using their camera and the model will predict the breed of the pet in real time.
+3. **Model:** This option displays the performance of the model on the training data, the data preprocessing pipeline, and the model summary.
+
+The web application is hosted and can be accessed by anyone with an internet connection. The model is deployed using Streamlit, which is a Python framework for building and sharing data apps.
+
+This project is useful for pet owners who want to identify the breed of their pet. It can also be used by animal shelters to help identify the breeds of animals in their care.
+
+## 2. Data
+The Oxford-IIIT Pet Dataset is a dataset of 37 categories of pets, with roughly 200 images for each class. The images have a large variation in scale, pose, and lighting. All images have an associated ground truth annotation of breed, head ROI, and pixel level trimap segmentation.
+
+The dataset is available for download via BitTorrent or HTTP. The dataset and annotations are roughly 800 MB in size.
+
+The following annotations are available for every image in the dataset:
+
+* Species and breed name
+* A tight bounding box (ROI) around the head of the animal
+* A pixel level foreground-background segmentation (Trimap)
+
+The dataset is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+
+**Data pre-processing**
+
+The following data pre-processing steps were performed:
+
+* The images were resized to 224x224 pixels.
+* The pixel values were normalized to the range [0, 1].
+* The ground truth annotations were converted to a format that is compatible with the Deep Learning model.
+
+The pre-processed dataset was then split into training, validation, and test sets. The training set was used to train the model, the validation set was used to monitor the model's performance during training, and the test set was used to evaluate the model's performance after training.
+
+
+
+## 3. Model: This section should describe the model architecture you are using, including the layers, the activation functions, and the loss function.
+## 4. Training: This section should describe how you trained your model, including the hyperparameters you used and the training procedure you followed.
+## 5. Evaluation: This section should describe how you evaluated your model's performance, including the metrics you used and the results you obtained.
+## 6. Deployment: This section should describe how you deployed your model to production.
+
 ## Project Overview
 ---
 This deep learning project presents a sophisticated Cat & Dog breed detector built using the advanced Fastai framework. Our objective was to accurately classify pet images into 37 distinct categories, representing various breeds. To achieve this, we utilized the challenging Oxford-IIIT Pet Dataset, known for its diverse pet images with complex variations in scale, pose, and lighting.
