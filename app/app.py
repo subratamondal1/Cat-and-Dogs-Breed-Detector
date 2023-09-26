@@ -28,6 +28,9 @@ def app():
                            icons=["cloud upload", "camera", "gear"],
                            menu_icon="cast", default_index=0, orientation="horizontal")
 
+    st.subheader("Other Projects")
+    st.markdown("1. [**Birds 525 Species Detector**]()")
+
     #######################################################################################################################
 
     # Load model and model class labels (vocab)
