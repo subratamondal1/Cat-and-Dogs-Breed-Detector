@@ -76,7 +76,7 @@ def capture_photo(model=None, vocab=None, key=None):
 
 def model_info():
     # Model performance on Freezed Layers
-    st.subheader("Model performance with Renset50 (freezed layers)")
+    st.subheader("Transfer Learning with Resnet50 - Freezed Layers")
     freezed_data = {
         'epoch': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
         'train_loss': [0.666741, 0.496385, 0.483526, 0.375414, 0.289794, 0.215737, 0.156200, 0.110415, 0.078930, 0.065367],
@@ -92,7 +92,7 @@ def model_info():
 
 
     # Model performance on Unfreezed Layers
-    st.subheader("Model performance with Renset50 (unfreezed layers)")
+    st.subheader("Transfer Learning with Resnet50 - Unfreezed Layers")
     unfreezed_data = {
         'epoch': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
         'train_loss': [0.057250, 0.052452, 0.043833, 0.050001, 0.044332, 0.043266, 0.043428, 0.032019, 0.035151, 0.036221],
