@@ -88,7 +88,7 @@ def model_info():
 
     df = pd.DataFrame(freezed_data)
     st.table(df)
-    st.line_chart(data=df, x="epoch", y=['train_loss', 'valid_loss', 'accuracy', 'error_rate'])
+    st.line_chart(data=df, x="epoch", y=['train_loss', 'valid_loss', 'accuracy', 'error_rate'], height=600)
 
 
     # Model performance on Unfreezed Layers
@@ -104,7 +104,7 @@ def model_info():
 
     df = pd.DataFrame(unfreezed_data)
     st.table(df)
-    st.line_chart(data=df, x="epoch", y=['train_loss', 'valid_loss', 'accuracy', 'error_rate'])
+    st.line_chart(data=df, x="epoch", y=['train_loss', 'valid_loss', 'accuracy', 'error_rate'], height=600)
 
 
 #######################################################################################################################
