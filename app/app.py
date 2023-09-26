@@ -61,8 +61,8 @@ def app():
 
         upload_photo(model=model, vocab=vocab, key="upload photo")
 
-        st.subheader("Other Projects")
-        st.markdown("1. [**Birds 525 Species Detector**](https://huggingface.co/spaces/iamsubrata/birds-525-species-detector)")
+        st.markdown("### Other Projects")
+        st.text("* [**Birds 525 Species Detector**](https://huggingface.co/spaces/iamsubrata/birds-525-species-detector)")
 
     #######################################################################################################################
 
