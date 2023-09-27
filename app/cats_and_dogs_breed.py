@@ -11,9 +11,9 @@ import pickle
 
 
 def upload_photo(model=None, vocab=None, key=None):
-    options = st.multiselect("**Select multiple names at once, then do Google/Bing Search, Download, Upload & Detect ...**",
+    options = st.multiselect("**List of all the cat and dog's breed used for trainng the model. Outside this, the model shall give wrong predictions.**",
                              vocab,
-                             vocab[10:18],
+                             vocab[:8],
                              key="pets_multiselect")
     st.text(f"{options}")
 
