@@ -62,7 +62,7 @@ def app():
         upload_photo(model=model, vocab=vocab, key="upload photo")
         
         st.divider()
-        st.markdown("#### `Other Projects`")
+        st.markdown("### `Other Projects`")
         # st.markdown("* [**Birds 525 Species Detector**](https://huggingface.co/spaces/iamsubrata/birds-525-species-detector)")
         st.link_button(label="**Birds 525 Species Detector**", url="https://huggingface.co/spaces/iamsubrata/birds-525-species-detector")
         st.divider()
